@@ -1,0 +1,219 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 12-Nov-2019, 18:41:19
+    Author     : williamhadnett
+*/
+@import url('https://fonts.googleapis.com/css?family=Source+Serif+Pro:700&display=swap');
+
+$logo_font: 'Source Serif Pro', serif;
+$logo_weight: 700;
+$logo_colour: #000;
+
+.logo
+{
+    font-family: $logo_font;
+    font-weight: $logo_weight;
+    font_colour: $logo_colour;
+}
+
+.footer_logo
+{
+    @extend .logo;
+}
+
+.fa-plug
+{
+    margin-right: 6px;
+}
+
+.product
+{
+    display: inline-block;
+    margin-right: 15px;
+}
+
+#cart_seperator
+{
+    margin-top: 10px;
+}
+
+/* The snackbar - position it at the bottom and in the middle of the screen */
+#snackbar {
+    visibility: hidden; /* Hidden by default. Visible on click */
+    min-width: 250px; /* Set a default minimum width */
+    margin-left: -125px; /* Divide value of min-width by 2 */
+    background-color: #333; /* Black background color */
+    color: #fff; /* White text color */
+    text-align: center; /* Centered text */
+    border-radius: 2px; /* Rounded borders */
+    padding: 16px; /* Padding */
+    position: fixed; /* Sit on top of the screen */
+    z-index: 1; /* Add a z-index if needed */
+    left: 50%; /* Center the snackbar */
+    bottom: 30px; /* 30px from the bottom */
+}
+
+/* Show the snackbar when clicking on a button (class added with JavaScript) */
+#snackbar.show {
+    visibility: visible; /* Show the snackbar */
+    /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+    However, delay the fade out process for 2.5 seconds */
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+/* Animations to fade the snackbar in and out */
+@-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}  /* The snackbar - position it at the bottom and in the middle of the screen */
+#snackbar {
+    visibility: hidden; /* Hidden by default. Visible on click */
+    min-width: 250px; /* Set a default minimum width */
+    margin-left: -125px; /* Divide value of min-width by 2 */
+    background-color: #333; /* Black background color */
+    color: #fff; /* White text color */
+    text-align: center; /* Centered text */
+    border-radius: 2px; /* Rounded borders */
+    padding: 16px; /* Padding */
+    position: fixed; /* Sit on top of the screen */
+    z-index: 1; /* Add a z-index if needed */
+    left: 50%; /* Center the snackbar */
+    bottom: 30px; /* 30px from the bottom */
+}
+
+/* Show the snackbar when clicking on a button (class added with JavaScript) */
+#snackbar.show {
+    visibility: visible; /* Show the snackbar */
+    /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+    However, delay the fade out process for 2.5 seconds */
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+/* Animations to fade the snackbar in and out */
+@-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+} 
+
+@import url('https://fonts.googleapis.com/css?family=Sacramento&display=swap');
+
+$special-pink: #621055;
+$special-pink2: #b52b65;
+$special-orange: #ed6663;
+$special-yellow: #ffa372;
+$white: #ffffff;
+$pinky-white: #fddde8;
+$purple : #000;
+$sacramento: 'Sacramento', cursive;
+
+
+.content{
+    padding-top: 40px;
+
+    .progress-card{
+
+        .progress{
+            border-radius: 20px;
+            background-color: rgba($white, 0.3);
+            height: 1.2rem;
+            box-shadow: 0 3px 44px 0 rgba($purple, 0.5);
+        }
+
+        .progress-bar{
+            border-radius: 20px;
+
+            &.progress-bar-striped{
+
+
+                &.stars{
+                    background-color: $purple;
+                    background-image: url('../images/stripe_logo.png')!important;
+                    background-size: 3rem 2.6rem;
+                    -webkit-animation: progress-bar-stars 2s linear infinite;
+                    animation: progress-bar-stars 2s linear infinite;
+
+                }
+
+            }
+        }		
+    }
+}
+
+
+@keyframes progress-bar-stars{
+    from {
+        background-position:  3rem 2.6rem;
+    }
+
+    to {
+        background-position: 0 0;
+    }
+}
+
+@keyframes progress-bar-pac{
+    from {
+        background-position: 1.2rem 0;
+    }
+
+    to {
+        background-position: 0 0;
+    }
+}
+
+#payment_buttons #google_container
+{
+    float: left;
+    margin-right: 10px;
+}
+
+#payment_buttons .stripe-button-el
+{
+    height: 40px;
+}
+
+#payment_buttons .stripe-button-el span
+{
+    height: 40px;
+}
+
+#delete_cart a
+{
+    font-size: 1em;
+    color: #0056b3;
+}
